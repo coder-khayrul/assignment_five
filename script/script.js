@@ -56,8 +56,8 @@ bgChangeButton.addEventListener("click", function () {
     const red = Math.floor(Math.random() * (255 - 0) + 0);
     const green = Math.floor(Math.random() * (255 - 0) + 0);
     const blue = Math.floor(Math.random() * (255 - 0) + 0);
-    
-    bodyArea.style.backgroundColor = `rgba(${red},${green},${blue}, .1)`;
+
+    bodyArea.style.backgroundColor = `rgba(${red},${green},${blue}, .2)`;
     console.log("clicked")
 
 })
