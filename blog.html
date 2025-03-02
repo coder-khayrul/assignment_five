@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--global style-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *:not(code) {
+            font-family: "Poppins", sans-serif;
+        }
+        code{ 
+        padding: 3px;
+        background-color: #ededed;
+        border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F4F7FF] pt-5 pb-10">
+    <!--header start-->
+    <header class="">
+        <div class="container max-w-[90%] mx-auto">
+            <nav class="flex items-center justify-between py-3 px-3 rounded-md bg-white">
+                <div class="header-logo w-[150px]">
+                    <a href="#">
+                        <img src="assets/header-logo.png" alt="header logo">
+                    </a>
+                </div>
+                <div class="header-actions flex gap-7 items-center">
+                    <button id="deshboard-enter-btn"
+                        class="btn font-normal text-[14px] text-white bg-[#3752FD] rounded-md  hover:bg-white hover:text-[#3752FD] duration-500 border hover:border-[#3752fd] ">
+                        Back To Desk
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--header end-->
+    <main>
+        <section class="blog-section mt-10">
+            <div class="container  max-w-[90%] mx-auto">
+                <div class="blog-section__title">
+                    <h2 class="text-center font-bold text-[40px]">Blog</h2>
+                </div>
+                <div class="blog-container flex flex-col gap-5 mt-10">
+                    <div class="blog bg-white rounded-lg">
+                        <h3 class="font-semibold text-[18px] border-b border-b-slate-300 pt-5 pb-3 px-5">Question-1: What are the different ways to select an element in the DOM?</h3>
+                        <p class="font-normal text-[13px] px-5 pt-3 pb-5 text-[#555] leading-[1.7rem]">There are some different way to select an element in the Document Object Model(DOM). Such as
+                            <code>getElementsByTagName()</code>, <code>getElementsByClassName()</code>,
+                            <code>getElementById()</code>, <code>querySelector()</code> and
+                            <code>querySelectorAll()</code> etc. Moreover we can select an element by
+                            <code>parentNode</code>, <code>childNode</code>, <code>previousElementSibling</code>,
+                            <code>previousSibling</code>, <code>nextElementSibling</code>, <code>nextSibling</code> and
+                            <code>children</code>.
+                        </p>
+                    </div>
+                    <div class="blog bg-white rounded-lg">
+                        <h3 class="font-semibold text-[18px] border-b border-b-slate-300 pt-5 pb-3 px-5">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h3>
+                        <p class="font-normal text-[13px] px-5 pt-3 pb-5 text-[#555] leading-[1.7rem]">There are some key defference between <code>innerText</code> , <code>innerHTML</code> and <code>textContent</code>. Fistly <code>innerHTML</code> use to get or set html structure of an element, however <code>innerText</code> use to get or set visible text of an element. On the other hand <code>textContent</code> is use to get all text including hidden text which <code>innerText</code> ignores.
+                        </p>
+                    </div>
+                    <div class="blog bg-white rounded-lg">
+                        <h3 class="font-semibold text-[18px] border-b border-b-slate-300 pt-5 pb-3 px-5">Question-3: What is event delegation in the DOM?</h3>
+                        <p class="font-normal text-[13px] px-5 pt-3 pb-5 text-[#555] leading-[1.5rem]">
+                            Event delegation is a technique in JavaScript where instead of attaching event listeners to multiple child elements, you add a single event listener to a parent element. This works because events bubble up through the DOM, allowing the parent to detect events from its children.
+                        </p>
+                    </div>
+                    <div class="blog bg-white rounded-lg">
+                        <h3 class="font-semibold text-[18px] border-b border-b-slate-300 pt-5 pb-3 px-5">Question-4: What is event bubbling in the DOM?</h3>
+                        <p class="font-normal text-[13px] px-5 pt-3 pb-5 text-[#555] leading-[1.5rem]">
+                            If you set an event listener on multiple nested elements, the event starts bubbling from the deepest element where the event occurred and moves up through its ancestors. This process is called event bubbling. For example, if you have an HTML structure like: parent element > inner parent > child > inner child, and you click on the parent, the event will first check the innermost element with an event listener before propagating upward to the parent elements
+                        </p>
+                    </div>
+                    <div class="blog bg-white rounded-lg">
+                        <h3 class="font-semibold text-[18px] border-b border-b-slate-300 pt-5 pb-3 px-5">Question-5: How do you create, add, and remove elements using JavaScript?</h3>
+                        <div class="font-normal text-[13px] px-5 pt-3 pb-5 text-[#555] leading-[1.5rem]">
+                            Here some easy way to create, add and remove an elements by javascript:
+                            <ul class="flex flex-col gap-2">
+                                <li><b>Element create</b>: In Javascript,  you can use <code>document.createElelement(tagName)</code> function to create an element. Now you can add some value or you can define inner html stucture.</li>
+                                <li><b>Add</b>: After creating new element you will not able to show in document. That's why we need to add this created element in dom. Like if you want to display just inside a parentElement then you have to use <code>parentElement.appendChild(createdElement)</code>.</li>
+                                <li><b>Remove</b>: In Javascript you can remove an element by <code>remove()</code> function. Like <code>createdElement.remove()</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="script/blog.js"></script>
+</body>
+
+</html>
